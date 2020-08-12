@@ -113,7 +113,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://github.com/hanhan9449/hanhan9449.github.io",
+            "baseHref": "hanhan9449.github.io",
             "name": "Han Han",
             "email": "haannn@qq.com",
             "branch": "master"
