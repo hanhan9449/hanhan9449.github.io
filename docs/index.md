@@ -13,7 +13,7 @@ hero:
       text: 关于我
       link: /hello
   image:
-    src: /apple.PNG
+    src: /apple-group-square.png
     alt: hanhan.rich Logo
 features:
   - title: 和大家沟通
