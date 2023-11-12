@@ -3,15 +3,15 @@ pageType: home
 
 hero:
   name: hanhan.rich
-  text: hanhan.rich
-  tagline: hanhan.rich tagline
+  text: 分享一些东西
+  tagline: 前端技术、一些别的
   actions:
     - theme: brand
-      text: Quick Start
+      text: 文章们
       link: /guide/
     - theme: alt
-      text: Github
-      link: https://github.com/web-infra-dev/rspress
+      text: 关于我
+      link: /hello
   image:
     src: /apple.PNG
     alt: hanhan.rich Logo

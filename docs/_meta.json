@@ -5,12 +5,8 @@
     "activeMatch": "/guide/"
   },
   {
-    "text": "我是",
+    "text": "我是什么",
     "link": "/hello/",
     "activeMatch": "/hello/"
-  },
-  {
-    "text": "API",
-    "link": "https://rspress.dev/api/index.html"
   }
 ]
