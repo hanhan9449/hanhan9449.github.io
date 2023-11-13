@@ -8,5 +8,10 @@
     "text": "我是什么",
     "link": "/hello/",
     "activeMatch": "/hello/"
+  },
+  {
+    "text": "画作",
+    "link": "/arts/",
+    "activeMatch": "/arts/"
   }
 ]
