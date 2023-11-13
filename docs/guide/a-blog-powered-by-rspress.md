@@ -1,3 +1,4 @@
+![header](/blog-with-rspress.png)
 # 一个由 rspress 驱动的博客
 
 ## 背景
