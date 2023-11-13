@@ -14,6 +14,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', mode: 'link', content: 'https://github.com/hanhan9449/hanhan9449.github.io' },
     ],
+    enableContentAnimation: true,
     lastUpdated: true
   },
 });
