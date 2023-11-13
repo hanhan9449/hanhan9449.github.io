@@ -29,3 +29,10 @@
     - 好开始，好维持。
         - 好的内容和门面是成功的一半，为页面打造一些有趣的内容和资源吧。
     - 平台有了，就靠自己多总结多写了。
+
+## 优化实践
+
+- 在 google search console 优化你的网页 seo。
+  - https://search.google.com/search-console/index?resource_id=sc-domain%3Ahanhan9449.top&hl=zh-cn
+- 借助 cloudflare 为你的网页分析、提速。
+  - https://dash.cloudflare.com/13cc7f75e56814f3f892a43b837cfbbd/hanhan9449.top/analytics/traffic
