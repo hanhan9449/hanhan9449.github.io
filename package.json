@@ -8,6 +8,9 @@
     "preview": "rspress preview"
   },
   "dependencies": {
+    "@douyinfe/semi-icons": "^2.46.1",
+    "@douyinfe/semi-ui": "^2.46.1",
+    "copy-to-clipboard": "^3.3.3",
     "rspress": "^1.0.0"
   },
   "devDependencies": {

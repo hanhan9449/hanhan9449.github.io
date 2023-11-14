@@ -5,13 +5,18 @@
     "activeMatch": "/guide/"
   },
   {
-    "text": "我是什么",
-    "link": "/hello/",
-    "activeMatch": "/hello/"
+    "text": "工具",
+    "link": "/tools/",
+    "activeMatch": "/tools/"
   },
   {
     "text": "画作",
     "link": "/arts/",
     "activeMatch": "/arts/"
+  },
+  {
+    "text": "我是什么",
+    "link": "/hello/",
+    "activeMatch": "/hello/"
   }
 ]
