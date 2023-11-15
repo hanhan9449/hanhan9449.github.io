@@ -1,0 +1,22 @@
+name: Img Interlace
+on:
+  push:
+    branches:
+      - test/interlace-action
+
+jobs:
+  makeImgInterlace:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: run Img Interlace shell script
+        run: |
+        cd scripts;
+        ./image-interlace.sh
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: Make img interlace
+          title: Make img interlace
+          body: Make img interlace
+          branch: autocreate/img-interlace
