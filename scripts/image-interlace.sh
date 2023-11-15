@@ -1,11 +1,15 @@
-function inter1() {
-    # interlace=(identify -quiet -format '%[interlace]' $1)
-    # echo $interlace
-    echo $1
-    # if []
-}
-# find ../docs/public/ -iname *.png | xargs -0  -I {} bash -c 'interlaceIt "{}"'
-inter1 hi
-# convert -interlace plane -quality 80 {} {}
-
-find ../docs/public/ -iname '*.png' -exec convert -interlace plane -quality 80 {} {} \;
+title="将 jpg、png 等格式的图片优化为交错后的图片"
+echo "$title start"
+count=0
+for i in $(find ../docs/public/ -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg') ; do
+interlace=$(identify -quiet -format "%[interlace]" $i)
+if [[ "$interlace" == "PNG" ]] || [[ "$interlace" == "JPEG" ]]; then
+  echo "$i 已交错，continue..."
+    continue
+fi
+convert -interlace plane -quality 80 "$i" "$i";
+count=$((count + 1))
+echo "$i 交错完成✅"
+done
+echo "🌈🌈本次共新增 $count 个图片"
+echo "$title end"
