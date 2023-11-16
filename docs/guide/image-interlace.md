@@ -20,11 +20,7 @@
 
 ### 图片闪动未占位
 
-TODO
-
-TODO
-
-TODO
+#### TODO待补充
 
 ### 图片从上到下加载慢
 
@@ -34,13 +30,15 @@ TODO
 
 #### 什么是交错
 
-未交错图片编码顺序就是从上到下，因此网络获取的顺序也是从上到下的。用户体感上就是图片从上到下加载了。而交错则是将图片分为若干个区，然后网络获取时会在每个区都获取一部分图片。用户体感上就是图片很快加载好，并一开始是模糊/像素的，后面逐渐清晰。
+未交错图片编码顺序就是从上到下，因此网络获取的顺序也是从上到下的。用户体感上就是图片从上到下加载了。
 
-- 优点
+而交错则是将图片分为若干个区，然后网络获取时会在每个区都获取一部分图片。用户体感上就是图片很快加载好，并一开始是模糊/像素的，后面逐渐清晰。
+
+- 交错优点
 
   - 加载快，用户体验好
 
-- 确定
+- 交错缺点
   - 图片体积变大
   - 交错处理麻烦
 
@@ -49,6 +47,11 @@ TODO
 ![3](/image-interlace/3.gif)
 
 ![4](/image-interlace/4.gif)
+
+针对图片处理，优化为交错有哪些方法呢？我归为两类：
+
+- 通过photoshop处理图片
+- 通过imagemagick处理图片
 
 #### 方案 1 人工 photoshop 生成
 
@@ -100,7 +103,7 @@ echo "$title end"
 
 ```
 
-#### 方案 3 借助 github action 自动化
+#### 【进阶】借助 github action 自动化
 
 每次写都很累了，何况我又不是每次都在一台有 imagemagick 的电脑上写，能不能有个机器人简化我的操作，帮我自动运行上面的脚本。
 
@@ -144,6 +147,34 @@ jobs:
 ```
 
 到这里，就实现了 master 分支修改后，自动提交图片交错优化 PR，等待用户手动合并该优化。那还不能做的更好呢？如果你充分信任提优化并提 PR 的逻辑，可以参照引用中自动提 PR 部分，有一个自动提并自动合入的 action！
+
+#### 【再进阶】浓缩就是精华 ★★★
+
+> 2023 11 月 17 日
+
+看见文章后的朋友们，知道可以使用这个脚本、这个 action yml 文件来实现自动交错图片。但没看见的，同样有类似需求的朋友，只能在网上搜集资料，来实现一个类似的。
+
+因此这里我将上面自建 action 流程封装成了一个新的 action [（Img interlace action）](https://github.com/hanhan9449/img-interlace-action)。引入只需要在 github action 脚本中添加该 action 即可。使用又简化了一截~~~~
+
+上链接！
+
+<https://github.com/hanhan9449/hanhan9449.github.io/blob/master/.github/workflows/make-image-interlace.yml>
+
+```yml
+name: Make image interlace
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  createImageInterlacePR:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hanhan9449/img-interlace-action@v1
+        with:
+          folder-root: "./docs/public"
+```
 
 ## 引用
 
