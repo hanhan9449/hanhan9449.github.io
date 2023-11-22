@@ -8,6 +8,8 @@
 
 热爱社交的 i 人
 
-![i](/IMG_0392.JPG)
+![i](./public/IMG_0392.JPG)
+
+## 大头照
 
 ![i2](./public/IMG_5183.jpg)

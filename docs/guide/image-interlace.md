@@ -44,9 +44,9 @@
 
 我以两张 gif 动图解释什么是交错。
 
-![3](/image-interlace/3.gif)
+![3](../public/image-interlace/3.gif)
 
-![4](/image-interlace/4.gif)
+![4](../public/image-interlace/4.gif)
 
 针对图片处理，优化为交错有哪些方法呢？我归为两类：
 
@@ -57,13 +57,13 @@
 
 如果是 UI 出图，用 photoshop 没有什么不方便的。但以我自己写博客为例，多是画一张图，或截一张图，这个时候如果都用 photoshop 手动处理就怪麻烦了~
 
-![1](/image-interlace/1.png)
+![1](../public/image-interlace/1.png)
 
-![2](/image-interlace/2.png)
+![2](../public/image-interlace/2.png)
 
 #### 方案 2 借助 imagemagick 生成
 
-![5](/image-interlace/5.png)
+![5](../public/image-interlace/5.png)
 
 imagemagick 是一个很牛的图片处理程序，可在 windows、macos、linux 上安装使用。很多图片处理软件也使用了它。可以说他在图片处理的地位和 ffmpeg（一个视频处理软件）相当。
 
