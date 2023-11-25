@@ -3,7 +3,7 @@ pageType: home
 
 hero:
   name: hanhan9449
-  text: 分享一些东西
+  text: 的博客
   tagline: 前端技术、一些别的
   actions:
     - theme: brand
