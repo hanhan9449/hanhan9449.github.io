@@ -17,4 +17,14 @@ export default defineConfig({
     enableContentAnimation: true,
     lastUpdated: true
   },
+  builderConfig: {
+    tools: {
+      rspack(options, {addRules}) {
+        addRules({
+          test: /\.dot$/i,
+          type: 'asset/source'
+        })
+      }
+    }
+  }
 });

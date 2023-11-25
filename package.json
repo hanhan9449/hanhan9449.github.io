@@ -10,6 +10,9 @@
   "dependencies": {
     "@douyinfe/semi-icons": "^2.46.1",
     "@douyinfe/semi-ui": "^2.46.1",
+    "@hanhan9449/utils": "^0.0.2",
+    "@rspress/theme-default": "^1.7.4",
+    "@viz-js/viz": "^3.2.3",
     "copy-to-clipboard": "^3.3.3",
     "rspress": "^1.0.0"
   },

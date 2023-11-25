@@ -1,0 +1,6 @@
+digraph helloWorld {
+    a -> b -> c -> d;
+    b -> d;
+    a -> c;
+    a -> d;
+}

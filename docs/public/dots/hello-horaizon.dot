@@ -1,0 +1,18 @@
+// 无向图使用graph
+graph helloWorld {
+    // 表示横向绘制
+    rankdir=LR;
+
+    // -- 表示无向图
+    // {} 表示组
+    start -- {learning, play, read};
+
+    learning -- {fe};
+
+    fe -- {react, vue, angular};
+
+    play -- {lol, dota2};
+
+    read -- 《对赌》;
+
+}
