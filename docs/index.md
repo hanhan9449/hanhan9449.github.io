@@ -2,7 +2,7 @@
 pageType: home
 
 hero:
-  name: hanhan.rich
+  name: hanhan9449
   text: 分享一些东西
   tagline: 前端技术、一些别的
   actions:
@@ -14,7 +14,7 @@ hero:
       link: /hello
   image:
     src: /apple-group-square.png
-    alt: hanhan.rich Logo
+    alt: hanhan9449 Logo
 features:
   - title: 和大家沟通
     details: 和大家沟通
