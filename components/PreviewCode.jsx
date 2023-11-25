@@ -10,7 +10,8 @@ export function PreviewCode({code, lang}) {
 
     return (
         <Pre>
-            <Code className={`language-${lang}`}>{code}</Code>
+            {/*<Code className={`language-${lang}`}>{code}</Code>*/}
+            <code>{code}</code>
         </Pre>
     )
 }
