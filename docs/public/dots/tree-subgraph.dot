@@ -1,0 +1,29 @@
+graph tree {
+    // 用来设置所有节点属性，node edge等
+    node [
+//      box polygon square rectangle
+// see: https://graphviz.org/doc/info/shapes.html
+        shape=rectangle
+    ]
+
+
+    // 用于设置某条边的属性
+    a --{b,e} [color=red];
+    b -- {c,f};
+    c -- d [style=dashed];
+    f -- {g,h} [style=dotted];
+
+    // 以cluster_开头，会被矩形隔离起来
+    subgraph cluster_level3 {
+        bgcolor=red;
+        c;
+        f;
+    }
+    subgraph cluster_root {
+        label="root"
+        bgcolor=pink;
+        a;
+    }
+
+
+}

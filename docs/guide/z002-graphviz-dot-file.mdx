@@ -1,23 +1,44 @@
 import {PreviewGraphviz, PreviewCode} from '../../components'
 import helloDotFile from '../public/dots/hello.dot'
 import helloHorizonDotFile from '../public/dots/hello-horaizon.dot'
+import treeDotFile from '../public/dots/tree.dot'
+import treeSubgraphDotFile from '../public/dots/tree-subgraph.dot'
 
 
 # graphviz 描述语言
 
 ## 介绍一下
 
-graphviz是一个开源工具包，用于绘制“DOT”语言描述的图形。
+> https://graphviz.org/
+
+graphviz是一个开源工具包，用于绘制“DOT”语言描述的图形。dot语言是图形描述语言，以`.dot`结尾，其简单的语法和文本字符形式，便于记录、分发、以及后续修改。在编写好后，graphviz负责将它渲染成png、pdf、或svg，其中，图形会自动进行排布。
+
 
 
 ## 举个例子
 
-### hello world
+> 官网的例子：https://graphviz.org/doc/info/shapes.html
+
+### 有向图
+
+> 用来画有数据流向的，例如数据流图，流程图，简单的依赖关系
 
 <PreviewCode code={helloDotFile} lang={'dot'}/>
 <PreviewGraphviz value={helloDotFile}></PreviewGraphviz>
 
-### 横向排布的 hello world
+### 无向图
+
+> 用来画思维导图
 
 <PreviewCode code={helloHorizonDotFile} lang={'dot'}/>
 <PreviewGraphviz value={helloHorizonDotFile}></PreviewGraphviz>
+
+### 二叉树
+
+<PreviewCode code={treeDotFile} lang={'dot'}/>
+<PreviewGraphviz value={treeDotFile}></PreviewGraphviz>
+
+### 子图
+
+<PreviewCode code={treeSubgraphDotFile} lang={'dot'}/>
+<PreviewGraphviz value={treeSubgraphDotFile}></PreviewGraphviz>

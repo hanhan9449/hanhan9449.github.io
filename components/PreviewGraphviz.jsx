@@ -15,10 +15,19 @@ function use(resource) {
 
 export function PreviewGraphviz({value}) {
     const _instance = use(instance())
-    const file = useMemo(() => {
-        let s = _instance?.renderSVGElement(value);
-        return s
+    const [file, error] = useMemo(() => {
+        try {
+            let s = _instance?.renderSVGElement(value);
+            return [s, null]
+        } catch (e) {
+            console.error(e)
+            return [null, e]
+        }
+        return [s]
     }, [value, _instance]);
+    if (error) {
+        return <div>sorry, 渲染抱错了，错误见打印台</div>
+    }
     return <div {...geneComponentTestProperty('preview-graphviz')} dangerouslySetInnerHTML={{
         __html: file?.outerHTML ?? ''
     }}></div>
