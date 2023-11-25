@@ -18,6 +18,9 @@ export default defineConfig({
     lastUpdated: true
   },
   builderConfig: {
+    html: {
+      template: './docs/index.html'
+    },
     tools: {
       rspack(options, {addRules}) {
         addRules({
