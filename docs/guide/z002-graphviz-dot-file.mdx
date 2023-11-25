@@ -1,32 +1,23 @@
-import {PreviewGraphviz} from '../../components/PreviewGraphviz'
+import {PreviewGraphviz, PreviewCode} from '../../components'
+import helloDotFile from '../public/dots/hello.dot'
+import helloHorizonDotFile from '../public/dots/hello-horaizon.dot'
+
 
 # graphviz 描述语言
 
+## 介绍一下
 
-<PreviewGraphviz value={`digraph G {
+graphviz是一个开源工具包，用于绘制“DOT”语言描述的图形。
 
-  subgraph cluster_0 {
-    style=filled;
-    color=lightgrey;
-    node [style=filled,color=white];
-    a0 -> a1 -> a2 -> a3;
-    label = "process #1";
-  }
 
-  subgraph cluster_1 {
-    node [style=filled];
-    b0 -> b1 -> b2 -> b3;
-    label = "process #2";
-    color=blue
-  }
-  start -> a0;
-  start -> b0;
-  a1 -> b3;
-  b2 -> a3;
-  a3 -> a0;
-  a3 -> end;
-  b3 -> end;
+## 举个例子
 
-  start [shape=Mdiamond];
-  end [shape=Msquare];
-}`}></PreviewGraphviz>
+### hello world
+
+<PreviewCode code={helloDotFile} lang={'dot'}/>
+<PreviewGraphviz value={helloDotFile}></PreviewGraphviz>
+
+### 横向排布的 hello world
+
+<PreviewCode code={helloHorizonDotFile} lang={'dot'}/>
+<PreviewGraphviz value={helloHorizonDotFile}></PreviewGraphviz>

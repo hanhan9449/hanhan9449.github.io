@@ -1,0 +1,9 @@
+digraph helloWorld {
+
+    rankdir=LR;
+
+
+    hello -> world;
+
+    world -> end;
+}
